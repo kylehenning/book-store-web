@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  media: false, // or 'media' or 'class'
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  media: "class", // or 'media' or 'class'
   theme: {
     extend: {},
   },
@@ -9,4 +9,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

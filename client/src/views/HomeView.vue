@@ -7,7 +7,7 @@ const tableData = ref([]);
 
 <template>
 
-    <h1 class="text-center">Hello World!</h1>
+    <h1 class="text-center text-black dark:text-white">Hello World!</h1>
     <MyTable class="m-10" :tableData="tableData" />
 
 </template>

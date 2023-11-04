@@ -10,7 +10,7 @@ const bookService = require("./services/bookService");
 
 app.use(
   cors({
-    origin: "",
+    origin: "http://localhost:5173",
   })
 );
 
