@@ -41,7 +41,7 @@ const bookService = {
   },
   getBookPublishers: (req, res) => {
     db.query(
-      "select b.publisher, count(ba.author_info_author_id) from book_info as b left join book_info_has_author_info as ba on b.book_id = ba.book_info_book_id group by b.publisher;",
+      "select b.publisher, count(ba.author_info_author_id) as author_total from book_info as b left join book_info_has_author_info as ba on b.book_id = ba.book_info_book_id group by b.publisher;",
       (err, result) => {
         if (err) {
           console.log(err);

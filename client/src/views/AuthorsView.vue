@@ -19,7 +19,7 @@ onMounted(() => {
 
 <template>
 
-    <h1 class="text-center text-black dark:text-white">Authors View</h1>
-    <MyTable />
+    <h1 class="text-center text-black dark:text-white text-3xl">AUTHORS</h1>
+    <MyTable :tableData="authorData" v-if="authorData" />
 
 </template>
