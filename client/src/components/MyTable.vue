@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
   tableData: {
@@ -7,25 +7,13 @@ const props = defineProps({
     required: false,
   },
 })
-const tableHeaders = ref(null);
 
-// Ugly for now
-watch(() => props.tableData, () => {
-    if (props.tableData?.length > 0) {
-        getTableHeaders();
+const tableHeaders = computed(() => {
+    if(props.tableData) {
+        return Object.keys(props.tableData[0]);
     }
-})
-
-onMounted(() => {
-    if (props.tableData?.length > 0) {
-        getTableHeaders();
-    }
-})
-
-const getTableHeaders = () => {
-    console.log("getting table headers")
-    tableHeaders.value = Object.keys(props.tableData[0]);
-}
+    return [];
+});
 
 </script>
 
